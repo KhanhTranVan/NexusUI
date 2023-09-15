@@ -35,7 +35,7 @@ local Success, Response = pcall(function()
 end)
 
 if not Success then
-	warn("\nOri Hub - Failed to load Feather Icons. Error code: " .. Response .. "\n")
+	warn("\nNexus Hub - Failed to load Feather Icons. Error code: " .. Response .. "\n")
 end	
 
 local function GetIcon(IconName)
@@ -225,7 +225,7 @@ local function LoadCfg(Config)
 				end    
 			end)
 		else
-			warn("Ori Hub Config Loader - Could not find ", a ,b)
+			warn("Nexus Hub Config Loader - Could not find ", a ,b)
 		end
 	end)
 end
@@ -455,7 +455,7 @@ function OrionLib:Init()
 			if isfile(OrionLib.Folder .. "/" .. game.GameId .. ".txt") then
 				LoadCfg(readfile(OrionLib.Folder .. "/" .. game.GameId .. ".txt"))
 				OrionLib:MakeNotification({
-					Name = "Ori Hub Configuration",
+					Name = "Nexus Configuration",
 					Content = "Loading Configuration For The Game " .. game.GameId .. "Success.",
 					Time = 5
 				})
@@ -471,14 +471,14 @@ function OrionLib:MakeWindow(WindowConfig)
 	local UIHidden = false
 
 	WindowConfig = WindowConfig or {}
-	WindowConfig.Name = WindowConfig.Name or "Ori Hub VÃ´ Tri=]]"
+	WindowConfig.Name = WindowConfig.Name or "Nexus Hub UI Library"
 	WindowConfig.ConfigFolder = WindowConfig.ConfigFolder or WindowConfig.Name
 	WindowConfig.SaveConfig = WindowConfig.SaveConfig or false
 	WindowConfig.HidePremium = WindowConfig.HidePremium or false
 	if WindowConfig.IntroEnabled == nil then
 		WindowConfig.IntroEnabled = true
 	end
-	WindowConfig.IntroText = WindowConfig.IntroText or "Ori Hub VÃ´ Tri=]]"
+	WindowConfig.IntroText = WindowConfig.IntroText or "Nexus Hub UI Library"
 	WindowConfig.CloseCallback = WindowConfig.CloseCallback or function() end
 	WindowConfig.ShowIcon = WindowConfig.ShowIcon or false
 	WindowConfig.Icon = WindowConfig.Icon or "rbxassetid://14760500227"
